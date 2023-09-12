@@ -1,0 +1,9 @@
+.UserHeader{
+    /* Complementary style for userheader component */
+    /* background-color in tailwind is indigo 50 */
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #eef2ff;
+    
+}

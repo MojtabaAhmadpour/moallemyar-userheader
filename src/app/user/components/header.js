@@ -42,19 +42,38 @@ const UserHeader = () => {
           </Link>
         </div>
       </div>
-      <div className="">
-        <div className="flex bg-white mx-4 rounded-md p-2 ">
-          <div className=" mx-2">
-            <button className="bg-indigo-50 mx-2">text</button>
-            <button className=" bg-indigo-600 mx-2">
-              text
-              <BiSearchAlt />
-            </button>
-          </div>
-          <div className=" mx-2">search bar</div>
-          <div className=" mx-2">dropdown filter</div>
+      <div className="flex bg-white mx-4 rounded-2xl p-2  justify-center items-center">
+        <div className="flex w-1/5 mx-2">
+          <button className="bg-indigo-50 mx-2 w-24 rounded-3xl p-2  flex items-center justify-center">
+            text <BiSearchAlt className="ml-1" />
+          </button>
+          <button className=" bg-indigo-600 mx-2 w-24 rounded-3xl p-2  flex items-center justify-center">
+            text
+            <BiSearchAlt className="ml-1" />
+          </button>
+        </div>
+        <div className="w-3/5 mx-2">
+          <form className="">
+            <input
+              type="text"
+              placeholder="............"
+              className="w-full bg-white  p-2 pr-4 text-right text-indigo-400 "
+            />
+          </form>
+        </div>
+        <div className="w-1/5 flex mx-2 items-center justify-center">
+          <div className={style.vl}></div>
+          <form className="">
+            <select id="drop" name="" className="w-36 ml-4">
+              <option value="one">one</option>
+              <option value="two">two</option>
+              <option value="three">three</option>
+              <option value="four">four</option>
+            </select>
+          </form>
         </div>
       </div>
+
       <div className="flex">
         <button className="bg-indigo-300 mx-1">text</button>
         <button className="bg-indigo-300 mx-1">text</button>

@@ -1,0 +1,16 @@
+.UserHeader{
+    /* Complementary style for userheader component */
+    /* background-color in tailwind is indigo 50 */
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #eef2ff;
+    border-top-right-radius:50px;
+    
+}
+ /* color .vl is indigo 50 in tailwind */
+.vl {
+    border-left: 2px solid #eef2ff;
+    height: 39px;
+    margin-right: 5px;
+  }

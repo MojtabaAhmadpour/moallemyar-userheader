@@ -1,7 +1,7 @@
 const UserBody = ()=>{
     return (
         <div>
-
+            BODY
         </div>
     )
 }

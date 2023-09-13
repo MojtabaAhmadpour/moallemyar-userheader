@@ -1,7 +1,7 @@
 const UserSide = ()=>{
     return (
         <div>
-            
+            SIDEBAR
         </div>
     )
 }

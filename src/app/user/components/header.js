@@ -10,7 +10,7 @@ import Link from "next/link";
 const UserHeader = () => {
   return (
     <div className={style.UserHeader}>
-      <div className="flex justify-items-center items-center justify-around ">
+      <div className="flex justify-items-center items-center justify-around mt-2 mb-8">
         <div className="flex  items-center">
           <div className="flex flex-col m-2">
             <p className="text-right font-bold" text-md>
@@ -44,10 +44,10 @@ const UserHeader = () => {
       </div>
       <div className="flex bg-white mx-4 rounded-2xl p-2  justify-center items-center">
         <div className="flex w-1/5 mx-2">
-          <button className="bg-indigo-50 mx-2 w-24 rounded-3xl p-2  flex items-center justify-center">
+          <button className="bg-indigo-50 text-indigo-600 mx-2 w-24 rounded-3xl p-2  flex items-center justify-center">
             text <BiSearchAlt className="ml-1" />
           </button>
-          <button className=" bg-indigo-600 mx-2 w-24 rounded-3xl p-2  flex items-center justify-center">
+          <button className=" bg-indigo-600 text-indigo-100 mx-2 w-24 rounded-3xl p-2  flex items-center justify-center">
             text
             <BiSearchAlt className="ml-1" />
           </button>
@@ -64,7 +64,7 @@ const UserHeader = () => {
         <div className="w-1/5 flex mx-2 items-center justify-center">
           <div className={style.vl}></div>
           <form className="">
-            <select id="drop" name="" className="w-36 ml-4">
+            <select id="drop" name="" className="w-36 ml-4 bg-white text-indigo-600">
               <option value="one">one</option>
               <option value="two">two</option>
               <option value="three">three</option>
@@ -74,13 +74,13 @@ const UserHeader = () => {
         </div>
       </div>
 
-      <div className="flex">
-        <button className="bg-indigo-300 mx-1">text</button>
-        <button className="bg-indigo-300 mx-1">text</button>
-        <button className="bg-indigo-300 mx-1">text</button>
-        <button className="bg-indigo-300 mx-1">text</button>
-        <button className="bg-indigo-300 mx-1">text</button>
-        <p>text</p>
+      <div className="flex justify-center items-center pt-6 pb-8">
+        <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
+        <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
+        <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
+        <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
+        <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
+        <p className="text-indigo-200 ml-16">text</p>
       </div>
     </div>
   );

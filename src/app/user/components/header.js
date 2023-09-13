@@ -13,14 +13,16 @@ const UserHeader = () => {
       <div className="flex justify-items-center items-center justify-around mt-2 mb-8">
         <div className="flex  items-center">
           <div className="flex flex-col m-2">
+            <Link href="">
             <p className="text-right font-bold" text-md>
               name
             </p>
-            <p className="text-right font-light text-xs">username</p>
+            </Link>
+            <Link href=""><p className="text-right font-light text-xs">username</p></Link>
           </div>
-          <Image src={userimage} className="w-10 h-10 rounded-3xl m-2" />
-          <BsBellFill className="mx-3 text-4xl bg-white rounded-3xl p-2" />
-          <FaComments className="mx-3 text-4xl bg-white rounded-3xl p-2" />
+          <Link href=""><Image src={userimage} className="w-10 h-10 rounded-3xl m-2" /></Link>
+          <Link href=""><BsBellFill className="mx-3 text-4xl bg-white rounded-3xl p-2" /></Link>
+          <Link href=""><FaComments className="mx-3 text-4xl bg-white rounded-3xl p-2" /></Link>
         </div>
         <div className=" ">
           <form className="">
@@ -80,7 +82,7 @@ const UserHeader = () => {
         <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
         <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
         <button className="bg-indigo-200 w-40 rounded-3xl p-2 mx-2 text-indigo-600 active:bg-indigo-600 text-indigo-100">text</button>
-        <p className="text-indigo-200 ml-16">text</p>
+       <Link  href=""> <p className="text-indigo-200 ml-16">text</p></Link>
       </div>
     </div>
   );

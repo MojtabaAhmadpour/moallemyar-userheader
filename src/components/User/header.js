@@ -5,6 +5,7 @@ import { BsBellFill } from "react-icons/Bs";
 import Image from "next/image";
 import { BiSearchAlt } from "react-icons/Bi";
 import Link from "next/link";
+import { Button, Space } from "antd";
 
 const UserHeader = () => {
   return (
@@ -13,15 +14,26 @@ const UserHeader = () => {
         <div className="flex  items-center">
           <div className="flex flex-col m-2">
             <Link href="">
-            <p className="text-right font-bold" text-md>
-              name
-            </p>
+              <p className="text-right font-bold" text-md>
+                name
+              </p>
             </Link>
-            <Link href=""><p className="text-right font-light text-xs">username</p></Link>
+            <Link href="">
+              <p className="text-right font-light text-xs">username</p>
+            </Link>
           </div>
-          <Link href=""><img src="/assets/img/userimage.jpg" className="w-8 h-8 rounded-3xl m-2" /></Link>
-          <Link href=""><BsBellFill className="mx-3 text-4xl bg-white rounded-3xl p-2" /></Link>
-          <Link href=""><FaComments className="mx-3 text-4xl bg-white rounded-3xl p-2" /></Link>
+          <Link href="">
+            <img
+              src="/assets/img/userimage.jpg"
+              className="w-8 h-8 rounded-3xl m-2"
+            />
+          </Link>
+          <Link href="">
+            <BsBellFill className="mx-3 text-4xl bg-white rounded-3xl p-2" />
+          </Link>
+          <Link href="">
+            <FaComments className="mx-3 text-4xl bg-white rounded-3xl p-2" />
+          </Link>
         </div>
         <div className=" ">
           <form className="">
@@ -65,7 +77,11 @@ const UserHeader = () => {
         <div className="w-1/5 flex mx-2 items-center justify-center">
           <div className={style.vl}></div>
           <form className="">
-            <select id="drop" name="" className="w-36 ml-4 bg-white text-indigo-600">
+            <select
+              id="drop"
+              name=""
+              className="w-36 ml-4 bg-white text-indigo-600"
+            >
               <option value="one">one</option>
               <option value="two">two</option>
               <option value="three">three</option>
@@ -75,15 +91,18 @@ const UserHeader = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center pt-6 pb-8">
-        <button className="bg-gray-color w-40 rounded-3xl p-2 mx-2 text-gray-color active:bg-indigo-600 text-indigo-100">text</button>
-        <button className="bg-gray-color w-40 rounded-3xl p-2 mx-2 text-gray-color active:bg-indigo-600 text-indigo-100">text</button>
-        <button className="bg-gray-color w-40 rounded-3xl p-2 mx-2 text-gray-color active:bg-indigo-600 text-indigo-100">text</button>
-        <button className="bg-gray-color w-40 rounded-3xl p-2 mx-2 text-gray-color active:bg-indigo-600 text-indigo-100">text</button>
-        <button className="bg-gray-color w-40 rounded-3xl p-2 mx-2 text-gray-color active:bg-indigo-600 text-indigo-100">text</button>
-       <Link  href=""> <p className="text-indigo-200 ml-16">text</p></Link>
+      <div className="flex flex-row-reverse justify-center items-center pt-6 pb-8">
+        <Space wrap>
+          <Button type="text" className={style.btns}>Text Button</Button>
+          <Button type="text" className={style.btns}>Text Button</Button>
+          <Button type="text" className={style.btns}>Text Button</Button>
+          <Button type="text" className={style.btns}>Text Button</Button>
+          <Button type="text" className={style.btns}>Text Button</Button>
+        </Space>
+        <Link href="">
+          <p className="text-indigo-200 ml-16">text</p>
+        </Link>
       </div>
-      
     </div>
   );
 };

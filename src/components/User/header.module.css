@@ -14,3 +14,16 @@
     height: 39px;
     margin-right: 5px;
   }
+ 
+.btns{
+    background-color: #f2f2f2;
+    color: #40189d;
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 6px;
+}
+.btns:active {
+    background-color: #40189d;
+    color: #f2f2f2;
+  }
+  

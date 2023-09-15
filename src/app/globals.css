@@ -10,3 +10,9 @@
 body {
   direction: rtl;
 }
+.bg-primary {
+  background: var(--primary-color);
+}
+.gray-color{
+  background: var(--gray-color);
+}

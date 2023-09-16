@@ -5,8 +5,10 @@
 :root {
   --primary-color: #40189d;
   --gray-color: #f2f2f2;
+  --light-color:#d2cfff;
+  --secondary-color:#a69fff;
+  --dark-color:#211c6f;
 }
-
 body {
   direction: rtl;
 }

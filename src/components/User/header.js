@@ -53,7 +53,7 @@ const UserHeader = () => {
     <div className={style.UserHeader}>
       <div className="flex justify-items-center items-center justify-around mt-2 mb-6">
         <div className="flex  items-center justify-center">
-          <div className="flex flex-col mb-2 ml-4 text-center">
+          <div className="flex flex-col mb-2 ml-4 text-center ">
             <Link href="">
               <p className="text-left font-bold" text-sm text-gray-600>
                 name
@@ -65,25 +65,25 @@ const UserHeader = () => {
           </div>
           <div className="">
             <Space direction="vertical" size={16}>
-              <Space wrap size={16}>
+              <Space wrap size={14}>
                 <Avatar icon={<UserOutlined />} />
               </Space>
             </Space>
             <Space size="middle" className="mr-6">
-              <Badge count={0} showZero className="">
+              <Badge count={0} showZero size="small" color="#40189d" className="right-0" >
                 <Avatar
                   shape="circle"
-                  size="middel"
+                  size="middle"
                   icon={<IoNotificationsSharp />}
-                  className="bg-white text-gray-600 items-center justify-center"
+                  className="flex bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
-              <Badge count={0} showZero className="mr-4">
+              <Badge count={0} showZero className="mr-4" color="#40189d" size="small">
                 <Avatar
                   shape="circle"
-                  size="middel"
+                  size="middle"
                   icon={<IoLogoWechat />}
-                  className="bg-white text-gray-600 items-center justify-center"
+                  className="flex bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
             </Space>

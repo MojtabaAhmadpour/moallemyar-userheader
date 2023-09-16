@@ -2,10 +2,51 @@ import style from "./header.module.css";
 import { RiMenu4Line } from "react-icons/Ri";
 import { BiSearchAlt } from "react-icons/Bi";
 import Link from "next/link";
-import { Button, Space, Avatar, Badge } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import { Button, Space, Avatar, Badge, Input, Dropdown } from "antd";
 import { IoLogoWechat } from "react-icons/io5";
 import { IoNotificationsSharp } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
+import { UserOutlined } from "@ant-design/icons";
+import { IoChevronDownOutline, IoLocationSharp } from "react-icons/io5";
+
+const items = [
+  {
+    key: "1",
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.antgroup.com"
+      >
+        1st menu item
+      </a>
+    ),
+  },
+  {
+    key: "2",
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.aliyun.com"
+      >
+        2nd menu item
+      </a>
+    ),
+  },
+  {
+    key: "3",
+    label: (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.luohanacademy.com"
+      >
+        3rd menu item
+      </a>
+    ),
+  },
+];
 
 const UserHeader = () => {
   return (
@@ -14,7 +55,7 @@ const UserHeader = () => {
         <div className="flex  items-center justify-center">
           <div className="flex flex-col mb-2 ml-4 text-center">
             <Link href="">
-              <p className="text-left font-bold" text-sm>
+              <p className="text-left font-bold" text-sm text-gray-600>
                 name
               </p>
             </Link>
@@ -23,9 +64,9 @@ const UserHeader = () => {
             </Link>
           </div>
           <div className="">
-            <Space direction="vertical" size={16} >
-              <Space wrap size={16} >
-                <Avatar  icon={<UserOutlined /> } />
+            <Space direction="vertical" size={16}>
+              <Space wrap size={16}>
+                <Avatar icon={<UserOutlined />} />
               </Space>
             </Space>
             <Space size="middle" className="mr-6">
@@ -34,7 +75,7 @@ const UserHeader = () => {
                   shape="circle"
                   size="middel"
                   icon={<IoNotificationsSharp />}
-                  className="bg-white text-gray-400 items-center justify-center"
+                  className="bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
               <Badge count={0} showZero className="mr-4">
@@ -42,7 +83,7 @@ const UserHeader = () => {
                   shape="circle"
                   size="middel"
                   icon={<IoLogoWechat />}
-                  className="bg-white text-gray-400 items-center justify-center"
+                  className="bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
             </Space>
@@ -62,45 +103,41 @@ const UserHeader = () => {
         </div>
 
         <div className="flex  items-center ">
-          <strong className=" px-8">Search Jobs</strong>
+          <strong className=" px-8 text-gray-600">Search Jobs</strong>
           <Link href="/">
-            <RiMenu4Line className="text-3xl" />
+            <RiMenu4Line className="text-3xl text-gray-600" />
           </Link>
         </div>
       </div>
-      <div className="flex bg-white mx-4 rounded-2xl p-2  justify-center items-center">
-        <div className="flex w-1/5 mx-2">
-          <button className="bg-indigo-50 text-indigo-600 mx-2 w-24 rounded-3xl p-2  flex justify-center items-center">
-            text <BiSearchAlt className="ml-1" />
-          </button>
-          <button className=" bg-indigo-600 text-indigo-100 mx-2 w-24 rounded-3xl p-2  flex justify-center items-center">
-            text
-            <BiSearchAlt className="ml-1 " />
-          </button>
+      <div className="flex bg-white mx-4 rounded-2xl p-2  justify-between justify-center items-center space-x-2">
+        <div className="">
+          <Space wrap>
+            <Button type="text" className={style.rbtn}>
+              <IoSearch />
+              Text Button
+            </Button>
+            <Button type="text" className={style.lbtn}>
+              <IoSearch /> Text Button
+            </Button>
+          </Space>
         </div>
-        <div className="w-3/5 mx-2">
-          <form className="">
-            <input
-              type="text"
-              placeholder="............"
-              className="w-full bg-white  p-2 pr-4 text-right text-indigo-400 "
-            />
-          </form>
-        </div>
-        <div className="w-1/5 flex mx-2 items-center justify-center">
+        <div className="flex">
+          <Input placeholder="search" className="w-96 border-none"/>
           <div className={style.vl}></div>
-          <form className="">
-            <select
-              id="drop"
-              name=""
-              className="w-36 ml-4 bg-white text-indigo-600"
-            >
-              <option value="one">one</option>
-              <option value="two">two</option>
-              <option value="three">three</option>
-              <option value="four">four</option>
-            </select>
-          </form>
+        </div>
+        <div className="">
+          <Dropdown
+            menu={{
+              items,
+            }}
+            placement="bottomLeft"
+            arrow
+          >
+            <Button className="flex items-center border-none text-bg-primary ">
+              <IoChevronDownOutline className={style.dropdown}/> Dropdown
+              <IoLocationSharp className="mr-2"/>
+            </Button>
+          </Dropdown>
         </div>
       </div>
 

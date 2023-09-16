@@ -10,17 +10,16 @@
 }
  /* color .vl is indigo 50 in tailwind */
 .vl {
-    border-left: 2px solid #eef2ff;
+    border-left: 2px solid #eaedf7;
     height: 39px;
     margin-right: 5px;
   }
  
 .btns{
-    background-color: #f2f2f2;
+    background-color: rgb(237 233 254);
     color: #40189d;
     border-radius: 50px;
-    font-weight: 600;
-    padding: 6px;
+    font-weight: 700;
 }
 .btns:active {
     background-color: #40189d;

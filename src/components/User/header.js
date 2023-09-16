@@ -1,20 +1,20 @@
 import style from "./header.module.css";
 import { RiMenu4Line } from "react-icons/Ri";
-import { FaComments } from "react-icons/fa";
-import { BsBellFill } from "react-icons/Bs";
-import Image from "next/image";
 import { BiSearchAlt } from "react-icons/Bi";
 import Link from "next/link";
-import { Button, Space } from "antd";
+import { Button, Space, Avatar, Badge } from "antd";
+import { UserOutlined } from "@ant-design/icons";
+import { IoLogoWechat } from "react-icons/io5";
+import { IoNotificationsSharp } from "react-icons/io5";
 
 const UserHeader = () => {
   return (
     <div className={style.UserHeader}>
-      <div className="flex justify-items-center items-center justify-around mt-2 mb-8">
-        <div className="flex  items-center">
-          <div className="flex flex-col m-2">
+      <div className="flex justify-items-center items-center justify-around mt-2 mb-6">
+        <div className="flex  items-center justify-center">
+          <div className="flex flex-col mb-2 ml-4 text-center">
             <Link href="">
-              <p className="text-right font-bold" text-md>
+              <p className="text-left font-bold" text-sm>
                 name
               </p>
             </Link>
@@ -22,36 +22,49 @@ const UserHeader = () => {
               <p className="text-right font-light text-xs">username</p>
             </Link>
           </div>
-          <Link href="">
-            <img
-              src="/assets/img/userimage.jpg"
-              className="w-8 h-8 rounded-3xl m-2"
-            />
-          </Link>
-          <Link href="">
-            <BsBellFill className="mx-3 text-4xl bg-white rounded-3xl p-2" />
-          </Link>
-          <Link href="">
-            <FaComments className="mx-3 text-4xl bg-white rounded-3xl p-2" />
-          </Link>
+          <div className="">
+            <Space direction="vertical" size={16} >
+              <Space wrap size={16} >
+                <Avatar  icon={<UserOutlined /> } />
+              </Space>
+            </Space>
+            <Space size="middle" className="mr-6">
+              <Badge count={0} showZero className="">
+                <Avatar
+                  shape="circle"
+                  size="middel"
+                  icon={<IoNotificationsSharp />}
+                  className="bg-white text-gray-400 items-center justify-center"
+                />
+              </Badge>
+              <Badge count={0} showZero className="mr-4">
+                <Avatar
+                  shape="circle"
+                  size="middel"
+                  icon={<IoLogoWechat />}
+                  className="bg-white text-gray-400 items-center justify-center"
+                />
+              </Badge>
+            </Space>
+          </div>
         </div>
         <div className=" ">
           <form className="">
             <button type="submit">
-              <BiSearchAlt className=" text-indigo-400 relative left-7 top-1 text-lg" />
+              <BiSearchAlt className=" text-indigo-400 absolute top-9 left-80 text-lg" />
             </button>
             <input
               type="text"
               placeholder="جستجو"
-              className="w-96 bg-indigo-100 rounded-3xl p-2 pr-4 text-right text-indigo-400 "
+              className="w-80 bg-violet-100 rounded-3xl p-1 pr-4 text-right text-gray-color "
             />
           </form>
         </div>
 
         <div className="flex  items-center ">
-          <strong className="mr-6">Search Jobs</strong>
+          <strong className=" px-8">Search Jobs</strong>
           <Link href="/">
-            <RiMenu4Line className="text-4xl" />
+            <RiMenu4Line className="text-3xl" />
           </Link>
         </div>
       </div>
@@ -93,14 +106,24 @@ const UserHeader = () => {
 
       <div className="flex flex-row-reverse justify-center items-center pt-6 pb-8">
         <Space wrap>
-          <Button type="text" className={style.btns}>Text Button</Button>
-          <Button type="text" className={style.btns}>Text Button</Button>
-          <Button type="text" className={style.btns}>Text Button</Button>
-          <Button type="text" className={style.btns}>Text Button</Button>
-          <Button type="text" className={style.btns}>Text Button</Button>
+          <Button type="text" className={style.btns}>
+            Text Button
+          </Button>
+          <Button type="text" className={style.btns}>
+            Text Button
+          </Button>
+          <Button type="text" className={style.btns}>
+            Text Button
+          </Button>
+          <Button type="text" className={style.btns}>
+            Text Button
+          </Button>
+          <Button type="text" className={style.btns}>
+            Text Button
+          </Button>
         </Space>
         <Link href="">
-          <p className="text-indigo-200 ml-16">text</p>
+          <p className="text-violet-400 ml-16">text</p>
         </Link>
       </div>
     </div>

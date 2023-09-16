@@ -15,8 +15,8 @@
 }
 
 .btns {
-  background-color: rgb(237 233 254);
-  color: #40189d;
+  background-color: var(--secondary-color);
+  color:var(--dark-color);
   border-radius: 50px;
   font-weight: 700;
 }
@@ -36,11 +36,11 @@
   margin-left: 8px;
 }
 .lbtn:hover {
-  background-color:#40189d;
+  background-color:var(--secondary-color);
   color:#f2f2f2 ;
 }
 .rbtn {
-  background-color: #40189d;
+  background-color: var(--dark-color);
   color: #f2f2f2;
   border-radius: 50px;
   font-weight: 700;
@@ -51,10 +51,18 @@
   margin-left: 8px;
 }
 .rbtn:hover{
-  background-color:#40189d;
-  color:#f2f2f2 ;
+  background-color:var(--secondary-color);
+  color:var(--dark-color) ;
 }
 .dropdown {
   color: #40189d;
-  margin-left: 30px;
+  margin-left: 60px;
+  
+}
+.dropdownbtn{
+  display: flex;
+  align-items: center;
+  color: var(--dark-color) !important;
+  font-weight: 600;
+ 
 }

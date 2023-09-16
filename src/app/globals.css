@@ -18,3 +18,18 @@ body {
 .gray-color{
   background: var(--gray-color);
 }
+.text-btn {
+  color: var(--dark-color) ;
+}
+.bg-btn{
+background-color: var(--secondary-color);
+}
+.text-color{
+  color:var(gray)
+} ;
+.bg-hover{
+  background-color: var(--secondary-color);
+}
+.bg-btn{
+  background-color: var(--secondary-color);
+}

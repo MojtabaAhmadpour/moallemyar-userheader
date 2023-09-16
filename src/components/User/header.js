@@ -63,9 +63,9 @@ const UserHeader = () => {
               <p className="text-right font-light text-xs">username</p>
             </Link>
           </div>
-          <div className="">
-            <Space direction="vertical" size={16}>
-              <Space wrap size={14}>
+          <div className="flex items-center">
+            <Space direction="vertical" size={14}>
+              <Space wrap size="middle">
                 <Avatar icon={<UserOutlined />} />
               </Space>
             </Space>
@@ -96,8 +96,8 @@ const UserHeader = () => {
             </button>
             <input
               type="text"
-              placeholder="جستجو"
-              className="w-80 bg-violet-100 rounded-3xl p-1 pr-4 text-right text-gray-color "
+              placeholder="جستجو..."
+              className="w-80 bg-violet-100 placeholder:text-gray-500 rounded-3xl p-1 pr-4 text-right "
             />
           </form>
         </div>
@@ -122,7 +122,7 @@ const UserHeader = () => {
           </Space>
         </div>
         <div className="flex">
-          <Input placeholder="search" className="w-96 border-none"/>
+          <Input placeholder="جستجو..."  className="w-96 border-none text-gray-500"/>
           <div className={style.vl}></div>
         </div>
         <div className="">
@@ -133,7 +133,7 @@ const UserHeader = () => {
             placement="bottomLeft"
             arrow
           >
-            <Button className="flex items-center border-none text-bg-primary ">
+            <Button className={style.dropdownbtn}>
               <IoChevronDownOutline className={style.dropdown}/> Dropdown
               <IoLocationSharp className="mr-2"/>
             </Button>
@@ -160,7 +160,7 @@ const UserHeader = () => {
           </Button>
         </Space>
         <Link href="">
-          <p className="text-violet-400 ml-16">text</p>
+          <p className="text-gray-500 ml-16">text</p>
         </Link>
       </div>
     </div>

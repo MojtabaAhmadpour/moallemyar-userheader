@@ -70,6 +70,7 @@ const UserHeader = () => {
                   className="flex bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
+              {/* <div className="w-2 h-2 bg-blue-400"></div> */}
               <Badge
                 count={0}
                 showZero
@@ -84,10 +85,10 @@ const UserHeader = () => {
                   className="flex bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
-            </Space>
-            <Space direction="vertical" size={14}>
-              <Space wrap size="middle">
-                <Avatar icon={<UserOutlined />} className="mr-5 " />
+              <Space direction="vertical" size={14}>
+                <Space wrap size="middle">
+                  <Avatar icon={<UserOutlined />} className=" " />
+                </Space>
               </Space>
             </Space>
           </div>
@@ -155,7 +156,7 @@ const UserHeader = () => {
           >
             <Button className={style.dropdownbtn}>
               <IoLocationSharp className={style.locationicon} />
-              لیست بازشونده 
+              لیست بازشونده
               <IoChevronDownOutline className={style.dropdownicon} />
             </Button>
           </Dropdown>

@@ -18,7 +18,7 @@ const items = [
         rel="noopener noreferrer"
         href="https://www.antgroup.com"
       >
-        1st menu item
+        لینک شماره 1
       </a>
     ),
   },
@@ -30,7 +30,7 @@ const items = [
         rel="noopener noreferrer"
         href="https://www.aliyun.com"
       >
-        2nd menu item
+        لینک شماره 2
       </a>
     ),
   },
@@ -42,7 +42,7 @@ const items = [
         rel="noopener noreferrer"
         href="https://www.luohanacademy.com"
       >
-        3rd menu item
+        لینک شماره 3
       </a>
     ),
   },
@@ -94,11 +94,11 @@ const UserHeader = () => {
           <div className="flex flex-col mb-2 ml-4 mr-2 text-center ">
             <Link href="">
               <p className="text-right font-bold" text-sm text-gray-600>
-                name
+                نام
               </p>
             </Link>
             <Link href="">
-              <p className="text-right font-light text-xs">username</p>
+              <p className="text-right font-light text-xs">نام کاربری</p>
             </Link>
           </div>
         </div>
@@ -120,7 +120,7 @@ const UserHeader = () => {
             <RiMenu4Line className="text-3xl text-gray-600" />
           </Link>
           <Link href="/">
-            <strong className=" px-8 text-gray-600">Search Jobs</strong>
+            <strong className=" px-8 text-gray-600">جستجوی کار </strong>
           </Link>
         </div>
       </div>
@@ -129,11 +129,11 @@ const UserHeader = () => {
         <div className="">
           <Space wrap>
             <Button type="text" className={style.lbtn}>
-              Text Button
+              دکمه شماره 1
               <IoSearch className="m-1" />
             </Button>
             <Button type="text" className={style.rbtn}>
-              Text Button
+              دکمه شماره 2
               <IoSearch className="m-1" />
             </Button>
           </Space>
@@ -154,34 +154,34 @@ const UserHeader = () => {
             arrow
           >
             <Button className={style.dropdownbtn}>
-            <IoLocationSharp className={style.locationicon} />
-              Dropdown
+              <IoLocationSharp className={style.locationicon} />
+              لیست بازشونده 
               <IoChevronDownOutline className={style.dropdownicon} />
             </Button>
           </Dropdown>
         </div>
       </div>
-
+      {/* row three contains the entire header */}
       <div className="flex flex-row-reverse justify-center items-center pt-6 pb-8">
         <Space wrap>
           <Button type="text" className={style.btns}>
-            Text Button
+            دکمه شماره 1{" "}
           </Button>
           <Button type="text" className={style.btns}>
-            Text Button
+            دکمه شماره 2{" "}
           </Button>
           <Button type="text" className={style.btns}>
-            Text Button
+            دکمه شماره 3{" "}
           </Button>
           <Button type="text" className={style.btns}>
-            Text Button
+            دکمه شماره 4{" "}
           </Button>
           <Button type="text" className={style.btns}>
-            Text Button
+            دکمه شماره 5{" "}
           </Button>
         </Space>
         <Link href="">
-          <p className="text-gray-500 ml-16">text</p>
+          <p className="text-gray-500 ml-16">دکمه</p>
         </Link>
       </div>
     </div>

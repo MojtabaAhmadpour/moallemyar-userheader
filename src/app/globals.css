@@ -5,31 +5,37 @@
 :root {
   --primary-color: #40189d;
   --gray-color: #f2f2f2;
-  --light-color:#d2cfff;
-  --secondary-color:#a69fff;
-  --dark-color:#211c6f;
+  --light-color: #d2cfff;
+  --secondary-color: #a69fff;
+  --dark-color: #211c6f;
+}
+@font-face {
+  font-family: "vazirmatn";
+  src: local("vazirmatn"),
+    url(../../public/fonts/Vazirmatn-Black.ttf) format("truetype");
 }
 body {
   direction: rtl;
+  font-family: vazirmatn !important;
 }
 .bg-primary {
   background: var(--primary-color);
 }
-.gray-color{
+.gray-color {
   background: var(--gray-color);
 }
 .text-btn {
-  color: var(--dark-color) ;
+  color: var(--dark-color);
 }
-.bg-btn{
-background-color: var(--secondary-color);
-}
-.text-color{
-  color:var(gray)
-} ;
-.bg-hover{
+.bg-btn {
   background-color: var(--secondary-color);
 }
-.bg-btn{
+.text-color {
+  color: var(gray);
+}
+.bg-hover {
+  background-color: var(--secondary-color);
+}
+.bg-btn {
   background-color: var(--secondary-color);
 }

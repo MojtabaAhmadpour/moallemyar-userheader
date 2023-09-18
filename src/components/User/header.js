@@ -51,34 +51,18 @@ const items = [
 const UserHeader = () => {
   return (
     <div className={style.UserHeader}>
-      <div className="flex justify-items-center items-center justify-around mt-2 mb-6">
+      {/* row one contains the entire header */}
+      <div className="flex justify-items-center items-center justify-around flex-row-reverse mt-2 mb-6">
         <div className="flex  items-center justify-center">
-          <div className="flex flex-col mb-2 ml-4 text-center ">
-            <Link href="">
-              <p className="text-left font-bold" text-sm text-gray-600>
-                name
-              </p>
-            </Link>
-            <Link href="">
-              <p className="text-right font-light text-xs">username</p>
-            </Link>
-          </div>
-          <div className="flex items-center">
-            <Space direction="vertical" size={14}>
-              <Space wrap size="middle">
-                <Avatar icon={<UserOutlined />} />
-              </Space>
-            </Space>
-            <Space size="middle" className="mr-6">
-              <Badge count={0} showZero size="small" color="#40189d" className="right-0" >
-                <Avatar
-                  shape="circle"
-                  size="middle"
-                  icon={<IoNotificationsSharp />}
-                  className="flex bg-white text-gray-600 items-center justify-center"
-                />
-              </Badge>
-              <Badge count={0} showZero className="mr-4" color="#40189d" size="small">
+          <div className="flex items-center  ">
+            <Space size="middle" className="">
+              <Badge
+                count={0}
+                showZero
+                className="mr-4"
+                color="#40189d"
+                size="small"
+              >
                 <Avatar
                   shape="circle"
                   size="middle"
@@ -86,7 +70,36 @@ const UserHeader = () => {
                   className="flex bg-white text-gray-600 items-center justify-center"
                 />
               </Badge>
+              <Badge
+                count={0}
+                showZero
+                size="small"
+                color="#40189d"
+                className="right-0"
+              >
+                <Avatar
+                  shape="circle"
+                  size="middle"
+                  icon={<IoNotificationsSharp />}
+                  className="flex bg-white text-gray-600 items-center justify-center"
+                />
+              </Badge>
             </Space>
+            <Space direction="vertical" size={14}>
+              <Space wrap size="middle">
+                <Avatar icon={<UserOutlined />} className="mr-5 " />
+              </Space>
+            </Space>
+          </div>
+          <div className="flex flex-col mb-2 ml-4 mr-2 text-center ">
+            <Link href="">
+              <p className="text-right font-bold" text-sm text-gray-600>
+                name
+              </p>
+            </Link>
+            <Link href="">
+              <p className="text-right font-light text-xs">username</p>
+            </Link>
           </div>
         </div>
         <div className=" ">
@@ -103,26 +116,33 @@ const UserHeader = () => {
         </div>
 
         <div className="flex  items-center ">
-          <strong className=" px-8 text-gray-600">Search Jobs</strong>
           <Link href="/">
             <RiMenu4Line className="text-3xl text-gray-600" />
           </Link>
+          <Link href="/">
+            <strong className=" px-8 text-gray-600">Search Jobs</strong>
+          </Link>
         </div>
       </div>
-      <div className="flex bg-white mx-4 rounded-2xl p-2  justify-between justify-center items-center space-x-2">
+      {/* row two contains the entire header */}
+      <div className="flex flex-row-reverse bg-white mx-4 rounded-2xl p-2  justify-between justify-center items-center space-x-2">
         <div className="">
           <Space wrap>
-            <Button type="text" className={style.rbtn}>
-              <IoSearch />
-              Text Button
-            </Button>
             <Button type="text" className={style.lbtn}>
-              <IoSearch /> Text Button
+              Text Button
+              <IoSearch className="m-1" />
+            </Button>
+            <Button type="text" className={style.rbtn}>
+              Text Button
+              <IoSearch className="m-1" />
             </Button>
           </Space>
         </div>
         <div className="flex">
-          <Input placeholder="جستجو..."  className="w-96 border-none text-gray-500"/>
+          <Input
+            placeholder="جستجو..."
+            className="w-96 border-none text-gray-500"
+          />
           <div className={style.vl}></div>
         </div>
         <div className="">
@@ -134,8 +154,9 @@ const UserHeader = () => {
             arrow
           >
             <Button className={style.dropdownbtn}>
-              <IoChevronDownOutline className={style.dropdown}/> Dropdown
-              <IoLocationSharp className="mr-2"/>
+            <IoLocationSharp className={style.locationicon} />
+              Dropdown
+              <IoChevronDownOutline className={style.dropdownicon} />
             </Button>
           </Dropdown>
         </div>

@@ -54,15 +54,19 @@
   background-color:var(--secondary-color);
   color:var(--dark-color) ;
 }
-.dropdown {
-  color: #40189d;
-  margin-left: 60px;
-  
-}
+
 .dropdownbtn{
   display: flex;
   align-items: center;
   color: var(--dark-color) !important;
-  font-weight: 600;
+  font-weight: 600;  
  
+}
+.dropdownicon {
+  color: #40189d;
+  margin-right: 50px;
+}
+.locationicon{
+  margin-left: 10px;
+  color: #40189d;
 }

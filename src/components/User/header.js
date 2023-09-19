@@ -1,13 +1,15 @@
+"use client";
 import style from "./header.module.css";
 import { RiMenu4Line } from "react-icons/Ri";
 import { BiSearchAlt } from "react-icons/Bi";
 import Link from "next/link";
-import { Button, Space, Avatar, Badge, Input, Dropdown } from "antd";
+import { Button, Space, Avatar, Badge, Input, Dropdown, Popover } from "antd";
 import { IoLogoWechat } from "react-icons/io5";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
 import { UserOutlined } from "@ant-design/icons";
 import { IoChevronDownOutline, IoLocationSharp } from "react-icons/io5";
+import React, { useState } from "react";
 
 const items = [
   {
@@ -49,6 +51,13 @@ const items = [
 ];
 
 const UserHeader = () => {
+  const [open, setOpen] = useState(false);
+  const hide = () => {
+    setOpen(false);
+  };
+  const handleOpenChange = (newOpen) => {
+    setOpen(newOpen);
+  };
   return (
     <div className={style.UserHeader}>
       {/* row one contains the entire header */}
@@ -64,31 +73,37 @@ const UserHeader = () => {
                 size="small"
               >
                 <Link href="#">
-                <Avatar
-                  shape="circle"
-                  size="middle"
-                  icon={<IoLogoWechat />}
-                  className="flex bg-white text-gray-600 items-center justify-center"
-                />
+                  <Avatar
+                    shape="circle"
+                    size="middle"
+                    icon={<IoLogoWechat />}
+                    className="flex bg-white text-gray-600 items-center justify-center"
+                  />
                 </Link>
-
               </Badge>
-              <Badge
-                count={0}
-                showZero
-                size="small"
-                color="#40189d"
-                className="right-0"
+              <Popover
+                content={<a onClick={hide}>Close</a>}
+                title="پیام ها "
+                trigger="click"
+                open={open}
+                onOpenChange={handleOpenChange}
+                className=""
               >
-                <Link href="#">
+                <Badge
+                  count={0}
+                  showZero
+                  size="small"
+                  color="#40189d"
+                  className="right-0"
+                >
                   <Avatar
                     shape="circle"
                     size="middle"
                     icon={<IoNotificationsSharp />}
                     className="flex bg-white text-gray-600 items-center justify-center"
                   />
-                </Link>
-              </Badge>
+                </Badge>
+              </Popover>
               <Space direction="vertical" size={14}>
                 <Space wrap size="middle">
                   <Avatar icon={<UserOutlined />} className="" />

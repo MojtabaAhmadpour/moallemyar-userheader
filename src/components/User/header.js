@@ -59,18 +59,20 @@ const UserHeader = () => {
               <Badge
                 count={0}
                 showZero
-                className="mr-4"
+                className=""
                 color="#40189d"
                 size="small"
               >
+                <Link href="#">
                 <Avatar
                   shape="circle"
                   size="middle"
                   icon={<IoLogoWechat />}
                   className="flex bg-white text-gray-600 items-center justify-center"
                 />
+                </Link>
+
               </Badge>
-              {/* <div className="w-2 h-2 bg-blue-400"></div> */}
               <Badge
                 count={0}
                 showZero
@@ -78,16 +80,18 @@ const UserHeader = () => {
                 color="#40189d"
                 className="right-0"
               >
-                <Avatar
-                  shape="circle"
-                  size="middle"
-                  icon={<IoNotificationsSharp />}
-                  className="flex bg-white text-gray-600 items-center justify-center"
-                />
+                <Link href="#">
+                  <Avatar
+                    shape="circle"
+                    size="middle"
+                    icon={<IoNotificationsSharp />}
+                    className="flex bg-white text-gray-600 items-center justify-center"
+                  />
+                </Link>
               </Badge>
               <Space direction="vertical" size={14}>
                 <Space wrap size="middle">
-                  <Avatar icon={<UserOutlined />} className=" " />
+                  <Avatar icon={<UserOutlined />} className="" />
                 </Space>
               </Space>
             </Space>
@@ -112,7 +116,6 @@ const UserHeader = () => {
               type="text"
               placeholder="جستجو..."
               className="w-80 bg-violet-100 placeholder:text-gray-500 rounded-3xl p-1 pr-4 text-right  focus:outline-none"
-              
             />
           </form>
         </div>

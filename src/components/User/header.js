@@ -106,7 +106,7 @@ const UserHeader = () => {
         <div className=" ">
           <form className="">
             <button type="submit">
-              <BiSearchAlt className=" text-indigo-400 absolute top-9 left-80 text-lg" />
+              <BiSearchAlt className=" relative right-80 top-2 left-2 text-indigo-400 text-lg" />
             </button>
             <input
               type="text"

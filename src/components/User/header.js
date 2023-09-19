@@ -111,7 +111,8 @@ const UserHeader = () => {
             <input
               type="text"
               placeholder="جستجو..."
-              className="w-80 bg-violet-100 placeholder:text-gray-500 rounded-3xl p-1 pr-4 text-right "
+              className="w-80 bg-violet-100 placeholder:text-gray-500 rounded-3xl p-1 pr-4 text-right  focus:outline-none"
+              
             />
           </form>
         </div>
@@ -142,7 +143,7 @@ const UserHeader = () => {
         <div className="flex">
           <Input
             placeholder="جستجو..."
-            className="w-96 border-none text-gray-500"
+            className="w-96 border-none text-gray-500  focus:outline-none"
           />
           <div className={style.vl}></div>
         </div>

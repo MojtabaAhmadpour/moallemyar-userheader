@@ -39,3 +39,7 @@ body {
 .bg-btn {
   background-color: var(--secondary-color);
 }
+.light-color {
+  background-color: var(--light-color);
+  color: var(--light-color);
+}

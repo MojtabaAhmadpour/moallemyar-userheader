@@ -3,14 +3,26 @@ import style from "./header.module.css";
 import { RiMenu4Line } from "react-icons/Ri";
 import { BiSearchAlt } from "react-icons/Bi";
 import Link from "next/link";
-import { Button, Space, Avatar, Badge, Input, Dropdown, Popover } from "antd";
+import {
+  Button,
+  Space,
+  Avatar,
+  Badge,
+  Input,
+  Dropdown,
+  Popover,
+  List,
+  Skeleton,
+} from "antd";
 import { IoLogoWechat } from "react-icons/io5";
 import { IoNotificationsSharp } from "react-icons/io5";
-import { IoSearch } from "react-icons/io5";
+import { IoSearch, IoCloseCircleOutline } from "react-icons/io5";
 import { UserOutlined } from "@ant-design/icons";
 import { IoChevronDownOutline, IoLocationSharp } from "react-icons/io5";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
+const count = 3;
+const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
 const items = [
   {
     key: "1",
@@ -58,6 +70,74 @@ const UserHeader = () => {
   const handleOpenChange = (newOpen) => {
     setOpen(newOpen);
   };
+  const [initLoading, setInitLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    fetch(fakeDataUrl)
+      .then((res) => res.json())
+      .then((res) => {
+        setInitLoading(false);
+        setData(res.results);
+        setList(res.results);
+      });
+  }, []);
+  const onLoadMore = () => {
+    setLoading(true);
+    setList(
+      data.concat(
+        [...new Array(count)].map(() => ({
+          loading: true,
+          name: {},
+          picture: {},
+        }))
+      )
+    );
+    fetch(fakeDataUrl)
+      .then((res) => res.json())
+      .then((res) => {
+        const newData = data.concat(res.results);
+        setData(newData);
+        setList(newData);
+        setLoading(false);
+        window.dispatchEvent(new Event("resize"));
+      });
+  };
+  const loadMore =
+    !initLoading && !loading ? (
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: 12,
+          height: 32,
+          lineHeight: "32px",
+        }}
+      >
+        <Button onClick={onLoadMore} className={style.morebtn}>... موارد بیشتر</Button>
+      </div>
+    ) : null;
+  const content = (
+    <List
+      className="demo-loadmore-list w-80"
+      loading={initLoading}
+      itemLayout="horizontal"
+      loadMore={loadMore}
+      dataSource={list}
+      renderItem={(item) => (
+        <List.Item>
+          <Skeleton avatar title={false} loading={item.loading} active>
+            <List.Item.Meta
+              avatar={<Avatar src={item.picture.large} />}
+              title={<a href="https://ant.design">{item.name?.last}</a>}
+              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+            />
+          </Skeleton>
+        </List.Item>
+      )}
+    />
+  );
+
   return (
     <div className={style.UserHeader}>
       {/* row one contains the entire header */}
@@ -82,12 +162,11 @@ const UserHeader = () => {
                 </Link>
               </Badge>
               <Popover
-                content={<a onClick={hide}>Close</a>}
                 title="پیام ها "
                 trigger="click"
                 open={open}
                 onOpenChange={handleOpenChange}
-                className=""
+                content={content}
               >
                 <Badge
                   count={0}

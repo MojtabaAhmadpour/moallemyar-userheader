@@ -16,7 +16,7 @@
 
 .btns {
   background-color: var(--secondary-color);
-  color:var(--dark-color);
+  color: var(--dark-color);
   border-radius: 50px;
   font-weight: 700;
 }
@@ -34,12 +34,10 @@
   justify-content: center;
   align-content: center;
   margin-left: 8px;
-
-  
 }
 .lbtn:hover {
-  background-color:var(--dark-color);
-  color:var(--secondary-color) ;
+  background-color: var(--dark-color);
+  color: var(--secondary-color);
 }
 .rbtn {
   background-color: var(--dark-color);
@@ -52,23 +50,30 @@
   align-content: center;
   margin-left: 8px;
 }
-.rbtn:hover{
-  background-color:var(--secondary-color);
-  color:var(--dark-color) ;
+.rbtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
 }
 
-.dropdownbtn{
+.dropdownbtn {
   display: flex;
   align-items: center;
   color: var(--dark-color) !important;
-  font-weight: 600;  
- 
+  font-weight: 600;
 }
 .dropdownicon {
   color: #40189d;
   margin-right: 50px;
 }
-.locationicon{
+.locationicon {
   margin-left: 10px;
   color: #40189d;
+}
+.morebtn {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.morebtn :hover {
+  border-color: var(--dark-color);
+  color: var(--dark-color);
 }

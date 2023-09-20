@@ -20,10 +20,7 @@
   border-radius: 50px;
   font-weight: 700;
 }
-.btns:active {
-  background-color: #40189d;
-  color: #f2f2f2;
-}
+
 .lbtn {
   background-color: rgb(237 233 254);
   color: #40189d;
@@ -77,3 +74,4 @@
   border-color: var(--dark-color);
   color: var(--dark-color);
 }
+

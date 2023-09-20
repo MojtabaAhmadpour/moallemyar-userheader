@@ -153,18 +153,19 @@ const UserHeader = () => {
       <div className="flex justify-items-center items-center justify-around flex-row-reverse mt-2 mb-6">
         <div className="flex  items-center justify-center">
           <div className="flex items-center  ">
-            <Space size="middle" className="">
+            <Space size="middle">
               <Badge
                 count={0}
                 showZero
-                className=""
                 color="#40189d"
+                style={{insetInlineEnd:"initial" , right:"auto", left:"0", transform:"translate(0%, -50%)"}}
                 size="small"
               >
                 <Link href="#">
                   <Avatar
                     shape="circle"
                     size="middle"
+                    
                     icon={<IoLogoWechat />}
                     className="flex bg-white text-gray-600 items-center justify-center"
                   />
@@ -182,7 +183,8 @@ const UserHeader = () => {
                   showZero
                   size="small"
                   color="#40189d"
-                  className="right-0"
+                  className=""
+                  style={{insetInlineEnd:"initial" , right:"auto", left:"0", transform:"translate(0%, -50%)"}}
                 >
                   <Avatar
                     shape="circle"

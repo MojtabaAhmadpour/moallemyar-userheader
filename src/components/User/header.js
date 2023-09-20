@@ -21,8 +21,11 @@ import { UserOutlined } from "@ant-design/icons";
 import { IoChevronDownOutline, IoLocationSharp } from "react-icons/io5";
 import React, { useEffect, useState } from "react";
 
+//message content function
 const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
+
+//dropdown btn json data function
 const items = [
   {
     key: "1",

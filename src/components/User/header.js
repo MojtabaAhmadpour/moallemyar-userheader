@@ -117,7 +117,9 @@ const UserHeader = () => {
           lineHeight: "32px",
         }}
       >
-        <Button onClick={onLoadMore} className={style.morebtn}>... موارد بیشتر</Button>
+        <Button onClick={onLoadMore} className={style.morebtn}>
+          ... موارد بیشتر
+        </Button>
       </div>
     ) : null;
   const content = (
@@ -136,6 +138,9 @@ const UserHeader = () => {
               description=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
               "
             />
+            <Space>
+              <Badge status="processing" />
+            </Space>
           </Skeleton>
         </List.Item>
       )}

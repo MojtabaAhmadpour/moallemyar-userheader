@@ -203,12 +203,12 @@ const UserHeader = () => {
           </div>
           <div className="flex flex-col mb-2 ml-4 mr-2 text-center ">
             <Link href="">
-              <p className="text-right font-bold" text-sm text-gray-600>
+              <p className="text-right font-light" text-sm text-gray-600>
                 نام
               </p>
             </Link>
             <Link href="">
-              <p className="text-right font-light text-xs">نام کاربری</p>
+              <p className="text-right font-thin text-xs">نام کاربری</p>
             </Link>
           </div>
         </div>
@@ -220,7 +220,7 @@ const UserHeader = () => {
             <input
               type="text"
               placeholder="جستجو..."
-              className="w-80 bg-violet-100 placeholder:text-gray-500 rounded-3xl p-1 pr-4 text-right  focus:outline-none"
+              className="w-80 bg-violet-100 placeholder:text-gray-500 rounded-3xl p-1 pr-4 text-right font-thin  focus:outline-none"
             />
           </form>
         </div>
@@ -230,7 +230,7 @@ const UserHeader = () => {
             <RiMenu4Line className="text-3xl text-gray-600" />
           </Link>
           <Link href="/">
-            <strong className=" px-8 text-gray-600">جستجوی کار </strong>
+            <strong className=" px-8 text-gray-600 font-light">جستجوی کار </strong>
           </Link>
         </div>
       </div>
@@ -291,7 +291,7 @@ const UserHeader = () => {
           </Button>
         </Space>
         <Link href="">
-          <p className="text-gray-500 ml-16">دکمه</p>
+          <p className="text-gray-500 ml-16 font-thin">دکمه</p>
         </Link>
       </div>
     </div>

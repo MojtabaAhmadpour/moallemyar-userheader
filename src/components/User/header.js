@@ -133,7 +133,6 @@ const UserHeader = () => {
         <List.Item>
           <Skeleton avatar title={false} loading={item.loading} active>
             <List.Item.Meta
-              avatar={<Avatar src={item.picture.large} />}
               title={<a href="https://ant.design">{item.name?.last}</a>}
               description=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
               "
@@ -158,14 +157,18 @@ const UserHeader = () => {
                 count={0}
                 showZero
                 color="#40189d"
-                style={{insetInlineEnd:"initial" , right:"auto", left:"0", transform:"translate(0%, -50%)"}}
+                style={{
+                  insetInlineEnd: "initial",
+                  right: "auto",
+                  left: "0",
+                  transform: "translate(0%, -50%)",
+                }}
                 size="small"
               >
                 <Link href="#">
                   <Avatar
                     shape="circle"
                     size="middle"
-                    
                     icon={<IoLogoWechat />}
                     className="flex bg-white text-gray-600 items-center justify-center"
                   />
@@ -184,7 +187,12 @@ const UserHeader = () => {
                   size="small"
                   color="#40189d"
                   className=""
-                  style={{insetInlineEnd:"initial" , right:"auto", left:"0", transform:"translate(0%, -50%)"}}
+                  style={{
+                    insetInlineEnd: "initial",
+                    right: "auto",
+                    left: "0",
+                    transform: "translate(0%, -50%)",
+                  }}
                 >
                   <Avatar
                     shape="circle"
@@ -230,7 +238,9 @@ const UserHeader = () => {
             <RiMenu4Line className="text-3xl text-gray-600" />
           </Link>
           <Link href="/">
-            <strong className=" px-8 text-gray-600 font-light">جستجوی کار </strong>
+            <strong className=" px-8 text-gray-600 font-light">
+              جستجوی کار{" "}
+            </strong>
           </Link>
         </div>
       </div>

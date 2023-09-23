@@ -21,9 +21,26 @@ import { UserOutlined } from "@ant-design/icons";
 import { IoChevronDownOutline, IoLocationSharp } from "react-icons/io5";
 import React, { useEffect, useState } from "react";
 
-//message content function
+//notification content function
 const count = 3;
-const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat,picture&noinfo`;
+const notifData = [
+  {
+    title: ' Title 1',
+    message:"aaaaaaaa",
+  },
+  {
+    title: ' Title 2',
+    message:"bbbbbbbb",
+  },
+  {
+    title: ' Title 3',
+    message:"ccccccccc",
+  },
+  {
+    title: ' Title 4',
+    message:"ddddddd",
+  },
+];
 
 //dropdown btn json data function
 const items = [
@@ -66,6 +83,10 @@ const items = [
 ];
 
 const UserHeader = () => {
+  const [showMessage, setShowMessage] = useState(true)
+  const hideMessage =() =>{
+    setShowMessage(false)
+  }
   const [open, setOpen] = useState(false);
   const hide = () => {
     setOpen(false);
@@ -78,7 +99,7 @@ const UserHeader = () => {
   const [data, setData] = useState([]);
   const [list, setList] = useState([]);
   useEffect(() => {
-    fetch(fakeDataUrl)
+    fetch(notifData)
       .then((res) => res.json())
       .then((res) => {
         setInitLoading(false);
@@ -97,7 +118,7 @@ const UserHeader = () => {
         }))
       )
     );
-    fetch(fakeDataUrl)
+    fetch(notifData)
       .then((res) => res.json())
       .then((res) => {
         const newData = data.concat(res.results);
@@ -125,17 +146,18 @@ const UserHeader = () => {
   const content = (
     <List
       className="demo-loadmore-list w-80"
-      loading={initLoading}
+      // loading={initLoading}
       itemLayout="horizontal"
       loadMore={loadMore}
-      dataSource={list}
+      dataSource={notifData}
       renderItem={(item) => (
         <List.Item>
           <Skeleton avatar title={false} loading={item.loading} active>
             <List.Item.Meta
-              title={<a href="https://ant.design">{item.name?.last}</a>}
-              description=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
-              "
+              style={{fontWeight:"bold"}}
+              title={item.title}
+              description={item.message}
+              onClick ={hideMessage}
             />
             <Space>
               <Badge status="processing" />

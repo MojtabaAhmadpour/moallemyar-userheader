@@ -25,19 +25,19 @@ import React, { useEffect, useState } from "react";
 const count = 3;
 const notifData = [
   {
-    title: ' Title 1',
+    title: "Title 1",
     message:"aaaaaaaa",
   },
   {
-    title: ' Title 2',
+    title: "Title 2",
     message:"bbbbbbbb",
   },
   {
-    title: ' Title 3',
+    title: "Title 3",
     message:"ccccccccc",
   },
   {
-    title: ' Title 4',
+    title: "Title 4",
     message:"ddddddd",
   },
 ];
@@ -50,7 +50,7 @@ const items = [
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.antgroup.com"
+        href="#"
       >
         لینک شماره 1
       </a>
@@ -62,7 +62,7 @@ const items = [
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.aliyun.com"
+        href="#"
       >
         لینک شماره 2
       </a>
@@ -74,7 +74,7 @@ const items = [
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href="https://www.luohanacademy.com"
+        href="#"
       >
         لینک شماره 3
       </a>
